@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/quiz"
+    tools:context=".Quiz4">
+
+
+    <!-- que counter section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvQueConter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="@string/_1_10"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <!-- timer section -->
+
+
+    <!-- que section  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp">
+
+        <TextView
+            android:id="@+id/tvQue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_1_que_for_quiz"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <!-- option section  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:orientation="vertical">
+
+        <!-- op1 -->
+        <Button
+            android:id="@+id/btOpt13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:elevation="4dp"
+            android:gravity="start|center_vertical"
+            android:text="@string/option_1"
+            android:textAlignment="textStart"
+            tools:ignore="TextContrastCheck" />
+        <!-- op2 -->
+        <Button
+            android:id="@+id/btOpt14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:elevation="4dp"
+            android:gravity="start|center_vertical"
+            android:text="@string/option_2"
+            android:textAlignment="textStart"
+            tools:ignore="TextContrastCheck" />
+
+        <!-- op3 -->
+        <Button
+            android:id="@+id/btOpt15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:elevation="4dp"
+            android:gravity="start|center_vertical"
+            android:text="@string/option_3"
+            android:textAlignment="textStart" />
+
+        <!--  op4-->
+        <Button
+            android:id="@+id/btOpt16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:elevation="4dp"
+            android:gravity="start|center_vertical"
+            android:text="@string/option_4"
+            android:textAlignment="textStart" />
+
+
+    </LinearLayout>
+</LinearLayout>

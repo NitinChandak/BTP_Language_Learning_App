@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="textStart">
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="370dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="192dp"
+        android:text="Click on the speaker icon to listen to the word"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="271dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="56dp"
+        android:text="Choose the correct answer"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.228"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/soundButton1"
+        android:layout_width="54dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@+id/soundButton2"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView28"
+        app:srcCompat="@drawable/speaker" />
+
+    <ImageButton
+        android:id="@+id/soundButton2"
+        android:layout_width="54dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@+id/soundButton3"
+        app:layout_constraintTop_toBottomOf="@+id/textView28"
+        app:srcCompat="@drawable/speaker" />
+
+    <ImageButton
+        android:id="@+id/soundButton3"
+        android:layout_width="54dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@+id/soundButton4"
+        app:layout_constraintTop_toBottomOf="@+id/textView28"
+        app:srcCompat="@drawable/speaker" />
+
+    <ImageButton
+        android:id="@+id/soundButton4"
+        android:layout_width="54dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView28"
+        app:srcCompat="@drawable/speaker" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="1"
+        app:layout_constraintEnd_toEndOf="@+id/soundButton1"
+        app:layout_constraintHorizontal_bias="0.586"
+        app:layout_constraintStart_toStartOf="@+id/soundButton1"
+        app:layout_constraintTop_toBottomOf="@+id/soundButton1" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="2"
+        app:layout_constraintEnd_toEndOf="@+id/soundButton2"
+        app:layout_constraintStart_toStartOf="@+id/soundButton2"
+        app:layout_constraintTop_toBottomOf="@+id/soundButton2" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="14dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="12dp"
+        android:text="3"
+        app:layout_constraintEnd_toEndOf="@+id/soundButton3"
+        app:layout_constraintStart_toStartOf="@+id/soundButton3"
+        app:layout_constraintTop_toBottomOf="@+id/soundButton3" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="4"
+        app:layout_constraintEnd_toEndOf="@+id/soundButton4"
+        app:layout_constraintStart_toStartOf="@+id/soundButton4"
+        app:layout_constraintTop_toBottomOf="@+id/soundButton4" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="379dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="256dp"
+        android:text="Listen to the sounds above and choose which sound is the correct pronunciation of the word WORD"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.593"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/option1"
+        android:layout_width="56dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:background="#E3DBDB"
+        android:text="1"
+        android:textAlignment="center"
+        android:textColor="#575050"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+    <Button
+        android:id="@+id/option2"
+        android:layout_width="56dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="12dp"
+        android:background="#E3DBDB"
+        android:text="2"
+        android:textAlignment="center"
+        android:textColor="#575050"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option1" />
+
+    <Button
+        android:id="@+id/option3"
+        android:layout_width="56dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="12dp"
+        android:background="#E3DBDB"
+        android:text="3"
+        android:textAlignment="center"
+        android:textColor="#575050"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option2" />
+
+    <Button
+        android:id="@+id/option4"
+        android:layout_width="56dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="12dp"
+        android:background="#E3DBDB"
+        android:text="4"
+        android:textAlignment="center"
+        android:textColor="#575050"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option3" />
+
+    <Button
+        android:id="@+id/nextQuestion"
+        android:layout_width="257dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="88dp"
+        android:text="Next question >>"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

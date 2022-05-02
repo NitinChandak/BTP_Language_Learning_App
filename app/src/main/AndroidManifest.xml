@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity android:name=".PronunciationTestPage"/>
+        <activity android:name=".PronunciationTest1"/>
+        <activity android:name=".PronunciationTest2"/>
+        <activity android:name=".PronunciationPractice"/>
+        <activity android:name=".Word_5"/>
+        <activity android:name=".Word_4" />
+        <activity android:name=".Word_3" />
+        <activity android:name=".Word" />
+        <activity android:name=".Word_2"/>
+        <activity android:name=".Fin" />
+        <activity android:name=".Fin2"/>
+        <activity android:name=".Fin3"/>
+        <activity android:name=".Fin4"/>
+        <activity android:name=".Fin5"/>
+        <activity android:name=".Quiz1" />
+        <activity android:name=".Quiz2"/>
+        <activity android:name=".Quiz3"/>
+        <activity android:name=".Quiz4"/>
+        <activity android:name=".Quiz5"/>
+        <activity android:name=".EditProfile" />
+        <activity android:name=".Login" />
+        <activity android:name=".StartLearning" />
+        <activity android:name=".Test2"/>
+        <activity android:name=".Complete"/>
+        <activity android:name=".Testing"/>
+        <activity android:name=".Test3"/>
+        <activity android:name=".Game5x4Activity"/>
+        <activity android:name=".Game4x4Activity"/>
+        <activity android:name=".GameMatch3Activity"/>
+        <activity android:name=".Grade"/>
+        <activity android:name=".Score1"/>
+        <activity android:name=".Score2"/>
+        <activity android:name=".Score3"/>
+        <activity android:name=".Score4"/>
+        <activity android:name=".Score5"/>
+        <activity android:name=".RTest2"/>
+        <activity android:name=".Testing2"/>
+        <activity android:name=".GTest2"/>
+        <activity android:name=".Testing3"/>
+        <activity android:name=".TTest2"/>
+        <activity android:name=".Testing4"/>
+        <activity android:name=".QTest2"/>
+        <activity android:name=".Testing5"/>
+        <activity android:name=".QTest3"/>
+        <activity android:name=".GTest3"/>
+        <activity android:name=".TTest3"/>
+        <activity android:name=".RTest3"/>
+        <activity android:name=".QGame5x4Activity"/>
+        <activity android:name=".TGame5x4Activity"/>
+        <activity android:name=".GGame5x4Activity"/>
+        <activity android:name=".RGame5x4Activity"/>
+        <activity android:name=".RGame4x4Activity"/>
+        <activity android:name=".RGameMatch3Activity"/>
+        <activity android:name=".TGame4x4Activity"/>
+        <activity android:name=".TGameMatch3Activity"/>
+        <activity android:name=".GGame4x4Activity"/>
+        <activity android:name=".GGameMatch3Activity"/>
+        <activity android:name=".QGame4x4Activity"/>
+        <activity android:name=".QGameMatch3Activity"/>
+        <activity android:name=".Bar"/>
+        <activity android:name=".Bar2"/>
+        <activity android:name=".Bar3"/>
+        <activity android:name=".Bar4"/>
+        <activity android:name=".Bar5"/>
+        <activity android:name=".Register"  android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN"/>
+            <category android:name="android.intent.category.LAUNCHER"/>
+        </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"/>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
