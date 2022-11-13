@@ -22,6 +22,7 @@
         <activity android:name=".PronunciationTestPage"/>
         <activity android:name=".PronunciationTest1"/>
         <activity android:name=".PronunciationTest2"/>
+        <activity android:name=".PronunciationTest3"/>
         <activity android:name=".PronunciationPractice"/>
         <activity android:name=".Word_5"/>
         <activity android:name=".Word_4" />
