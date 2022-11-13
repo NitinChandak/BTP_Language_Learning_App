@@ -75,6 +75,7 @@ public class PronunciationPractice extends AppCompatActivity {
     private MediaRecorder mRecorder;
     public static final int REQUEST_AUDIO_PERMISSION_CODE = 1;
     MediaPlayer mp = new MediaPlayer();
+    MediaPlayer playRecord = new MediaPlayer();
     wavClass wavObj = null;
 
     StorageReference audioRef = null;
@@ -146,9 +147,9 @@ public class PronunciationPractice extends AppCompatActivity {
     }
 
     private void RequestPermissions() {
-        Log.d("TAG", "going for permissions");
-        ActivityCompat.requestPermissions(this,
-                new String[]{RECORD_AUDIO, WRITE_EXTERNAL_STORAGE},
+            Log.d("TAG", "going for permissions");
+            ActivityCompat.requestPermissions(this,
+                    new String[]{RECORD_AUDIO, WRITE_EXTERNAL_STORAGE},
                 REQUEST_AUDIO_PERMISSION_CODE);
     }
 
@@ -164,9 +165,6 @@ public class PronunciationPractice extends AppCompatActivity {
             wavObj.stopRecording();
             Log.d("pause", "pauseRecording: ");
             try {
-
-
-
                 new Converter().convert(localFile.getAbsolutePath(), getExternalCacheDir().getAbsolutePath()+"/outputFile.wav");
                 inputAudioFile = wavObj.filePath + "/" + wavObj.tempWavFile;
                 Wave Wav1 = new Wave(inputAudioFile);
@@ -189,14 +187,31 @@ public class PronunciationPractice extends AppCompatActivity {
                 }
                 System.out.println(total);
                 System.out.println(count);
-
-
                 byte[] firstFingerPrint = new FingerprintManager().extractFingerprint(Wav1);
                 byte[] secondFingerPrint = new FingerprintManager().extractFingerprint(Wav2);
                 Log.e("Here", String.valueOf(firstFingerPrint));
                 Log.e("Here", String.valueOf(secondFingerPrint));
                 FingerprintSimilarity similarity = Wav1.getFingerprintSimilarity(Wav2);
                 Log.i("Similarity Here", String.valueOf(similarity.getScore()));
+
+                playRecord.stop();
+                playRecord.reset();
+                try {
+                    playRecord.setDataSource(inputAudioFile);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                playRecord.prepareAsync();
+
+                playRecord.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer playRecord) {
+                        playRecord.start();
+                    }
+                });
+
+
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
