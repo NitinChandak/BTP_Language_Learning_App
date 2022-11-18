@@ -62,8 +62,7 @@ dependencies {
         exclude group:'com.google.guava'
     }
     implementation group: 'uk.me.berndporr', name:'iirj', version:'1.5'
+    implementation 'com.github.parse-community.Parse-SDK-Android:parse:4.1.0'
    // implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
-
-
-
 }
+

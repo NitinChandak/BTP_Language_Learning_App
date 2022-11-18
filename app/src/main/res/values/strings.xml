@@ -76,6 +76,12 @@
     <string name="grades_as_per_the_latest_attempt">Grades as per the Latest Attempt</string>
     <string name="visual_representation">Visual Representation</string>
     <string name="visualize">Visualize</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+
+    <!-- Paste BOTH strings as required -->
+    <string name="back4app_app_id">odNm8kGuKUaU2e1JnQk2TU6jn8UiK23LWw5CxnFg</string>
+    <string name="back4app_client_key">HW86w28YD92obIrl1WM88WhuLiUkLTN154ddptag</string>
+
 
 
 </resources>

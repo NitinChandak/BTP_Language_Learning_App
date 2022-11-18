@@ -37,6 +37,12 @@ import java.io.IOException;
 
 import javazoom.jl.converter.Converter;
 import javazoom.jl.decoder.JavaLayerException;
+import com.parse.FunctionCallback;
+import com.parse.ParseCloud;
+import com.parse.ParseException;
+// Java Dependencies
+import java.util.HashMap;
+import java.util.Map;
 
 public class PronunciationTest3 extends AppCompatActivity {
 
@@ -155,10 +161,6 @@ public class PronunciationTest3 extends AppCompatActivity {
             inputAudioFile = wavObj.filePath + "/" + wavObj.tempWavFile;
             wavObj.stopRecording();
             Log.d("pause", "pauseRecording: ");
-            int s = (int) (Math.random()*(max-min+1)+min);
-            Log.i("Score:", String.valueOf(s));
-            score.setText(String.valueOf(s)+"%");
-            comments.setText(returnComments(s));
             playRecord.stop();
             playRecord.reset();
             try {
@@ -172,6 +174,27 @@ public class PronunciationTest3 extends AppCompatActivity {
                 @Override
                 public void onPrepared(MediaPlayer playRecord) {
                     playRecord.start();
+                }
+            });
+
+            Map<String, String> parameters = new HashMap<String, String>();
+
+            // This calls the function in the Cloud Code
+            ParseCloud.callFunctionInBackground("getRandomNumber", parameters, new FunctionCallback<Map<String, Object>>() {
+                @Override
+                public void done(Map<String, Object> mapObject, ParseException e) {
+                    if (e == null) {
+                        // Everything is alright
+                        score.setText(mapObject.get("randomNumber").toString()+"%");
+                        try {
+                            comments.setText(returnComments((Integer) mapObject.get("randomNumber")));
+                        } catch (JavaLayerException ex) {
+                            ex.printStackTrace();
+                        }
+                    }
+                    else {
+                        // Something went wrong
+                    }
                 }
             });
         }

@@ -1,4 +1,4 @@
-    package com.example.myapplication;
+package com.example.myapplication;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -32,6 +32,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.parse.ParseObject;
 import com.squareup.picasso.Picasso;
 
 import java.util.Objects;
@@ -60,6 +61,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // todo : remove this code
+        ParseObject firstObject = new ParseObject("FirstClass");
+        firstObject.put("message","Hey ! First message from android. Parse is now connected");
+        firstObject.saveInBackground(e -> {
+            if (e != null){
+                Log.e("MainActivity", e.getLocalizedMessage());
+            }else{
+                Log.d("MainActivity","Object saved.");
+            }
+        });
+        // till here
 
         phone = findViewById(R.id.profilePhone);
         fullName = findViewById(R.id.profileName);

@@ -1,0 +1,4 @@
+Using firebase for storage,
+using Back4app for cloud functions,
+for ID Password of the above accounts,
+mail: nitin8chandak@gmail.com
